@@ -2,6 +2,7 @@ import React, { FC, PropsWithChildren } from 'react';
 
 import Head from 'next/head';
 import { maxWidth } from '@mui/system';
+import { Navbar } from '../ui';
 
 interface Props extends PropsWithChildren {
   title: string;
@@ -22,11 +23,11 @@ export const ShopLayout: FC<Props> = ({ children, title, pageDescription, imageF
         <meta name='og:description' content={ pageDescription } />
         { imageFullUrl && (
           <meta name='og:image' content={ imageFullUrl } />
-        )}s
+        )}
       </Head>
 
       <nav>
-        {/* TODO: Navbar */}
+        <Navbar />
       </nav>
 
       {/* TODO: Sidebar */}
