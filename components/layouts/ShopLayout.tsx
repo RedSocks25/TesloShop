@@ -4,7 +4,7 @@ import Head from 'next/head';
 
 import { maxWidth } from '@mui/system';
 
-import { Navbar } from '../ui';
+import { Navbar, SideMenu } from '../ui';
 
 
 interface Props extends PropsWithChildren {
@@ -33,7 +33,7 @@ export const ShopLayout: FC<Props> = ({ children, title, pageDescription, imageF
         <Navbar />
       </nav>
 
-      {/* TODO: Sidebar */}
+      <SideMenu />
 
       <main style={{
         margin: '80px auto',
