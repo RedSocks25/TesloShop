@@ -5,6 +5,7 @@ import NextLink from 'next/link';
 import { AppBar, Badge, Box, Button, IconButton, Link, Toolbar, Typography } from '@mui/material';
 import { SearchOutlined, ShoppingCartOutlined } from '@mui/icons-material';
 
+
 export const Navbar = () => {
   return (
     <AppBar>
@@ -18,6 +19,7 @@ export const Navbar = () => {
 
         <Box flex={ 1 } />
 
+        {/* Display the items inside the box depending of the screen size */}
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           <NextLink href='/category/men' passHref>
             <Link>

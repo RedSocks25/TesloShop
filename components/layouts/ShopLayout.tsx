@@ -1,8 +1,11 @@
 import React, { FC, PropsWithChildren } from 'react';
 
 import Head from 'next/head';
+
 import { maxWidth } from '@mui/system';
+
 import { Navbar } from '../ui';
+
 
 interface Props extends PropsWithChildren {
   title: string;
