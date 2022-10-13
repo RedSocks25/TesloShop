@@ -1,6 +1,8 @@
 import React from 'react';
-import { ShopLayout } from '../../components/layouts';
+
 import { Grid, Typography, Card, CardContent, Divider, Box, Button } from '@mui/material';
+
+import { ShopLayout } from '../../components/layouts';
 import { CartList } from '../../components/cart';
 import { OrderSummary } from '../../components/cart/OrderSummary';
 
