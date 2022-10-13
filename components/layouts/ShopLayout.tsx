@@ -2,8 +2,6 @@ import React, { FC, PropsWithChildren } from 'react';
 
 import Head from 'next/head';
 
-import { maxWidth } from '@mui/system';
-
 import { Navbar, SideMenu } from '../ui';
 
 

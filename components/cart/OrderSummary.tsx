@@ -1,5 +1,7 @@
-import { Divider, Grid, Typography } from '@mui/material';
 import React from 'react';
+
+import { Grid, Typography } from '@mui/material';
+
 
 export const OrderSummary = () => {
   return (

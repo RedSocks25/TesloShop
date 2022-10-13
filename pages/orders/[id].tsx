@@ -3,11 +3,12 @@ import React from 'react';
 import NextLink from 'next/link';
 
 import { Box, Card, CardContent, Divider, Grid, Typography, Link, Chip } from '@mui/material';
+import { CreditScoreOutlined } from '@mui/icons-material';
 
 import { ShopLayout } from '../../components/layouts';
 import { CartList } from '../../components/cart';
 import { OrderSummary } from '../../components/cart';
-import { CreditCardOffOutlined, CreditScoreOutlined } from '@mui/icons-material';
+
 
 const OrderPage = () => {
   return (

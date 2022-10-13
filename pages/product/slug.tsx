@@ -1,13 +1,14 @@
+import React from 'react';
+
 import { Button, Chip, Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import React from 'react';
 
 import { ShopLayout } from '../../components/layouts';
 import { ProductSlideshow } from '../../components/products';
 import { ItemCounter } from '../../components/ui';
-
 import { initialData } from '../../database/products';
 import { SizeSelector } from '../../components/products/SizeSelector';
+
 
 const product = initialData.products[0];
 

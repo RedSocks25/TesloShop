@@ -7,7 +7,7 @@ import { initialData } from '../database/products';
 import { ProductList } from '../components/products';
 
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
   return (
     <ShopLayout title={'Teslo Shop - Home'} pageDescription={'Find the best products here'}>
 
@@ -21,4 +21,4 @@ const Home: NextPage = () => {
   );
 }
 
-export default Home
+export default HomePage
