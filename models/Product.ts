@@ -35,7 +35,9 @@ const productSchema = new Schema({
   timestamps: true,
 });
 
-// TODO: create Mongo index
+// Mongo index for searching
+productSchema.index({ title: 'text', tags: 'text' });
+
 
 // Export Product Model found inside MongoDB, or if not, create one based on the schema
 const Product: Model<IProduct> = mongoose.models.Product || model('Product', productSchema);

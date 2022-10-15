@@ -10,7 +10,7 @@ type Data =
 | { message: string }
 | IProduct;
 
-export default function (req: NextApiRequest, res: NextApiResponse<Data>) {
+export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   
   // Get method called for this API endpoint
   switch (req.method) {
