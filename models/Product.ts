@@ -5,7 +5,7 @@ import { IProduct } from '../interfaces';
 const productSchema = new Schema({
   description: { type: String, required: true },
   images: [{ type: String }], // Inside [] when is a attr that can get more than one item, like an array
-  insStock: { type: Number, required: true, default: 0 }, // If value not entered, the is a default value added automatically
+  inStock: { type: Number, required: true, default: 0 }, // If value not entered, the is a default value added automatically
   price: { type: Number, required: true, default: 0 },
   sizes: [{
     type: String,
@@ -15,8 +15,6 @@ const productSchema = new Schema({
     },
   }],
   slug: { type: String, required: true, unique: true },
-  tags: [{ type: String }],
-  title: { type: String, required: true },
   type: {
     type: String,
     enum: {
@@ -24,6 +22,8 @@ const productSchema = new Schema({
       message: '{VALUES} is not a valid type of item', // Message in case of wrong size entered
     },
   },
+  tags: [{ type: String }],
+  title: { type: String, required: true },
   gender: {
     type: String,
     enum: {
