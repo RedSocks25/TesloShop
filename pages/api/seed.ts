@@ -1,7 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
 import { db, seedDatabase } from '../../database';
 import { Product } from '../../models';
-import { http } from '../../utils';
+import { HTTP_CODES } from '../../utils';
 
 
 type Data = {
@@ -12,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
   // Deny access if the API call to this endpoint comes from production
   if (process.env.NODE_ENV === 'production') {
-    return res.status(http.UNAUTHORIZED).json({
+    return res.status(HTTP_CODES.UNAUTHORIZED).json({
       message: 'Unauthorized to access this API endpoint',
     });
   }
@@ -27,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   // Cut the connection with DB
   await db.disconnect();
 
-  return res.status(http.CREATED).json({
+  return res.status(HTTP_CODES.CREATED).json({
     message: 'Process successfully completed. Database seeded'
   });
 }

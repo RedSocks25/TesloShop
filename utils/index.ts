@@ -1,1 +1,1 @@
-export * as http from './http-codes';
+export * from './constants';

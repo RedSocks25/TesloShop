@@ -1,8 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse } from 'next';
+
 import { db, SHOP_CONSTANTS } from '../../../database';
 import { IProduct } from '../../../interfaces';
 import { Product } from '../../../models';
-import { http } from '../../../utils';
+import { HTTP_CODES } from '../../../utils';
+
 
 type Data = 
 | { message: string }
@@ -16,12 +18,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       return getProducts(req, res);
     
     default:
-      return res.status(http.BAD_REQUEST).json({
+      return res.status(HTTP_CODES.BAD_REQUEST).json({
         message: 'Bad request',
       });
   }
-  
-  return res.status(200).json({ message: 'Example' });
 }
 
 const getProducts = async(req: NextApiRequest, res: NextApiResponse<Data>) => {
@@ -45,5 +45,5 @@ const getProducts = async(req: NextApiRequest, res: NextApiResponse<Data>) => {
   // Disconnect after query
   await db.disconnect();
 
-  return res.status(http.OK).json(products);
+  return res.status(HTTP_CODES.OK).json(products);
 }
